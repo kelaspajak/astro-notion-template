@@ -1,32 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroTelegram from '../components/HeroTelegram.astro';
 import FeaturedNav from '../components/FeaturedNav.astro';
-import FeaturedStats from '../components/FeaturedStats.astro';
+
+import FeaturedStat from '../components/FeaturedStat.astro';
 import Testimonial from '../components/Testimonial.astro';
 import FeaturedGeneral from '../components/FeaturedGeneral.astro';
 import ClickToAction from '../components/ClickToAction.astro';
-import { Image } from 'astro:assets';
-import telegram from '../images/telegram.jpg?url';
 ---
 
-<Layout>
-	<div slot="main">
-		<div class="mx-4 sm:mx-0">
-			<div class="aspect-w-16 aspect-h-7 max-w-7xl mx-auto">
-				<Image
-					width={1024}
-					height={350}
-					quality="high"
-					class="w-full object-cover rounded-xl"
-					src={telegram}
-					alt="Gambar Feature aplikasi yang digunakan dalam diskusi perpajakan sharepoint teams telegram"
-				/>
-			</div>
-			<FeaturedNav />
-			<FeaturedStats />
-			<Testimonial />
-			<FeaturedGeneral />
-			<ClickToAction />
-		</div>
+<Layout path="/">
+	<div slot="main" class="max-w-5xl mx-auto w-full">
+		<HeroTelegram />
+    <FeaturedStat />
+		<FeaturedNav />
+    <FeaturedGeneral />
+		<Testimonial />
+		<ClickToAction />
 	</div>
 </Layout>
