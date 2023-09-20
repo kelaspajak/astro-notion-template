@@ -10,12 +10,14 @@ import ClickToAction from '../components/ClickToAction.astro';
 ---
 
 <Layout path="/">
-	<div slot="main" class="max-w-5xl mx-auto w-full">
-		<HeroTelegram />
-    <FeaturedStat />
-		<FeaturedNav />
-    <FeaturedGeneral />
-		<Testimonial />
-		<ClickToAction />
+	<div slot="main">
+		<div class=""><HeroTelegram /></div>
+		<div class="max-w-5xl mx-auto w-full">
+			<FeaturedStat />
+			<FeaturedNav />
+			<FeaturedGeneral />
+			<Testimonial />
+			<ClickToAction />
+		</div>
 	</div>
 </Layout>
