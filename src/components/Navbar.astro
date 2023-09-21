@@ -4,8 +4,8 @@ import logo from '../images/logo.png?url'
 import { getNavLink } from '../lib/blog-helpers.ts'
 ---
 
-<div>
-	<div class="max-w-5xl w-full py-4 mx-auto flex items-center sm:flex-row flex-col">
+<div class="mb-8">
+	<div class="max-w-5xl w-full px-4 py-4 sm:px-6 mx-auto flex items-center sm:flex-row flex-col">
 		<a href={getNavLink('/')} class="flex font-medium items-center md:justify-start justify-center ">
 			<Image
 				class="inline-block h-[2.1rem] w-[2.1rem] rounded-full outline outline-zinc-200 shadow"
@@ -13,12 +13,12 @@ import { getNavLink } from '../lib/blog-helpers.ts'
 			/>
 			<span class="ml-3 text-lg font-heading font-semibold tracking-tighter">Diskusi Pajak</span>
 		</a>
-		<svg width="3" height="21" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="ml-4"><path d="M2.74 20.707H.846v-20H2.74v20Z"></path></svg>
+		<svg width="3" height="21" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="ml-4 hidden sm:block"><path d="M2.74 20.707H.846v-20H2.74v20Z"></path></svg>
 		<p
 			class="text-sm sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 flex font-semibold font-heading"
 		>
 		<a
-				href={getNavLink('/posts/fitur-berlangganan-yang-disediakan-diskusipajak')}
+				href={getNavLink('/fitur-berlangganan')}
 				class="decoration-2 hover:underline decoration-pink-500"
 				rel="noopener noreferrer">Fitur Langganan</a
 			>

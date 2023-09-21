@@ -1,50 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import FeaturedNav from '../components/FeaturedNav.astro';
-import FeaturedStats from '../components/FeaturedStat.astro';
-import Testimonial from '../components/Testimonial.astro';
-import FeaturedGeneral from '../components/FeaturedGeneral.astro';
-import ClickToAction from '../components/ClickToAction.astro';
 import { Image } from 'astro:assets';
 import hero from '../images/hero-berlangganan.png?url';
+import FiturLangganan from '../components/FiturLangganan.astro';
+import Pricing from '../components/Pricing.astro';
+
 ---
 
 <Layout>
 	<div slot="main">
-		<div class="mx-4 sm:mx-0">
+		<div class="mx-4">
 			<div class="aspect-w-16 aspect-h-7 max-w-5xl mx-auto">
 				<Image
 					width={1024}
 					height={350}
 					quality="high"
-					class="w-full object-cover rounded-xl"
+					class="w-full object-cover rounded-xl hover:scale-105 transition duration-300 cursor-pointer"
 					src={hero}
 					alt="Gambar Feature aplikasi yang digunakan dalam diskusi perpajakan sharepoint teams telegram"
 				/>
 			</div>
-			<div class="w-full max-w-2xl mx-auto my-10">
-				<h1>Quality software at scale with Vercel Sh1aces</h1>
-				<p>As companies and codebases grow, it becomes hard to sustain a fast release cycle without letting errors slip in to production. It shouldn't be this way. We should be able to move fast without breaking things—making quick updates while retaining great performance, security, and accessibility.</p>
-
-<p>Today, we're introducing Vercel Spaces, the biggest evolution of Vercel's workflow yet. Introducing powerful tools and conventions designed to integrate with your monorepo setup, to help you scale efficiently while retaining quality.</p>
-
-<p>With Vercel Spaces, you'll find insights on your development workflows, code health and build logs, and brand new functionality to boost efficiency and remove blockers with Conformance, Code Owners, and Vercel Runs. These products, currently available in early private beta for Enterprises, can be used with Vercel regardless of where you host your application.</p>
-
-
+			<div class="w-full max-w-5xl mx-auto my-10">
+				<FiturLangganan />
 			</div>
+			<div class="w-full max-w-2xl mx-auto my-10">
+				<Pricing />
+			</div>
+			
 		</div>
 	</div>
 </Layout>
-<style>
-	h1,h2,h3, p {
-		@apply font-sans mb-4;
-	}
-	h1 {
-	font-size: 2rem;
-    font-weight: 700;
-    color: var(--fg);
-    text-wrap: balance;
-	font-family: 'Inter';
-	margin-top: 2rem;
-	}
-</style>
