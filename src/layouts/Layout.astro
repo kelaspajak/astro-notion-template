@@ -72,8 +72,13 @@ if (database.Icon && database.Icon.Type === 'file') {
 			<Footer />
 		</div>
 
-		{ENABLE_LIGHTBOX && <script src={getStaticFilePath('/scripts/fslightbox.js')} />}
-		<script src="https://cdn.jsdelivr.net/npm/@preline/preline@1.0.0/dist/hs-ui.bundle.min.js"
+		{
+			ENABLE_LIGHTBOX && (
+				<script src={getStaticFilePath('/scripts/fslightbox.js')} />
+			)
+		}
+		<script
+			src="https://cdn.jsdelivr.net/npm/@preline/preline@1.0.0/dist/hs-ui.bundle.min.js"
 		></script>
 	</body>
 </html>
@@ -105,9 +110,11 @@ if (database.Icon && database.Icon.Type === 'file') {
 
 		--radius: 4px;
 
-		--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-			'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-		--font-mono: SFMono-Regular, Menlo, Consolas, 'PT Mono', 'Liberation Mono', Courier, monospace;
+		--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+			'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+			'Helvetica Neue', sans-serif;
+		--font-mono: SFMono-Regular, Menlo, Consolas, 'PT Mono', 'Liberation Mono',
+			Courier, monospace;
 	}
 
 	* {
@@ -161,14 +168,19 @@ if (database.Icon && database.Icon.Type === 'file') {
 	}
 
 	h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: theme('fontFamily.heading');
-    }
-
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: theme('fontFamily.heading');
+	}
+	/* pembetulan ol list di notion block */
+	ol > li.defaul,
+	ul > li.default {
+		padding: 6px 0;
+		white-space: pre-wrap;
+	}
 	figure {
 		margin: 0;
 		font-size: 0.85rem;
@@ -209,13 +221,13 @@ if (database.Icon && database.Icon.Type === 'file') {
 		font-size: 0.9rem;
 		line-height: 1.8rem;
 	}
-	/* p,
+	p,
 	ul {
 		color: #222;
 		font-weight: 400;
 		font-size: 1rem;
 		line-height: 1.8rem;
-	} */
+	}
 	ul,
 	ol {
 		margin: 0;
