@@ -11,11 +11,21 @@ module.exports = {
 			fontFamily: {
 				body: ['Inter', 'sans-serif'],
 				heading: ['Inter', 'sans-serif'],
-			},			
+			},
+			animation: {
+				marquee: 'marquee 50s linear infinite',
+			},
+			keyframes: {
+				marquee: {
+					from: {
+						transform: 'translateX(0)',
+					},
+					to: {
+						transform: 'translateX(calc(-100% - 2.5rem))',
+					},
+				},
+			},
 		},
 	},
-	plugins: [ 
-		require("@tailwindcss/typography"),
-		preline,
-	],
+	plugins: [require('@tailwindcss/typography'), preline],
 };
