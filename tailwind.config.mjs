@@ -10,7 +10,9 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				body: ['Inter', 'sans-serif'],
-				heading: ['Inter', 'sans-serif'],
+				heading: ['SF Pro Display', 'sans-serif'],
+				sans: ['SF Pro Display', 'sans-serif'],
+
 			},
 			animation: {
 				marquee: 'marquee 50s linear infinite',
