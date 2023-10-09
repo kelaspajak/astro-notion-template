@@ -21,17 +21,9 @@ astro-notion-blog enables you to create a blog using [Notion](https://www.notion
 
 ### PC
 
-<img src="https://github.com/otoyo/astro-notion-blog/assets/1063435/967bbc23-014c-427d-b6cd-02c41822fb45" width="600">
+<img src="[https://github.com/otoyo/astro-notion-blog/assets/1063435/967bbc23-014c-427d-b6cd-02c41822fb45](https://github.com/kelaspajak/diskusipajakcom/blob/main/public/diskusipajak.jpg?raw=true)" width="600">
 
-### Smartphone
 
-<img src="https://github.com/otoyo/astro-notion-blog/assets/1063435/bf1add06-1f1c-42ca-88c9-decb8c0dcf8f" width="300">
-
-## :globe_with_meridians: Demo
-
-[https://astro-notion-blog.pages.dev](https://astro-notion-blog.pages.dev)
-
-## :motor_scooter: Quick Start
 
 ### Requirements
 
@@ -97,21 +89,3 @@ npm run dev
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser
 4. Press `Ctrl+C` in the terminal to stop
-
-### For more information
-
-See [wiki](https://github.com/otoyo/astro-notion-blog/wiki).
-
-## :lady_beetle: Bug reports & feature requests
-
-To report an issue, please create a new Issue. You can use **either English or Japanese** to describe the issue. :wink:
-
-## :two_hearts: Sponsorship
-
-If you like astro-notion-blog, sponsor me so that I can keep on developing software. Thank you.
-
-[![GitHub sponsors](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/otoyo)
-
----
-
-astro-notion-blog is based [otoyo/notion-blog](https://github.com/otoyo/notion-blog)
