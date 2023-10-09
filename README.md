@@ -8,7 +8,7 @@ icon use https://tabler-icons.io/
 [![GitHub license](https://img.shields.io/github/license/otoyo/astro-notion-blog)](https://github.com/otoyo/astro-notion-blog/blob/main/LICENSE)
 [![GitHub sponsors](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/otoyo)
 
-<img src="https://github.com/kelaspajak/diskusipajakcom/blob/main/public/diskusipajak.jpg" width="480">
+<img src="https://github.com/kelaspajak/diskusipajakcom/blob/main/public/diskusipajak.jpg" width="600">
 
 astro-notion-blog enables you to create a blog using [Notion](https://www.notion.so/) and generates it statically, resulting in lightning-fast page views.
 
