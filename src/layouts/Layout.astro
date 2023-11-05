@@ -61,6 +61,13 @@ if (database.Icon && database.Icon.Type === 'file') {
 			integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0"
 			crossorigin="anonymous"
 		/>
+		<!-- Preload local fonts -->
+		<link
+			href="/fonts/newsreader-subset.woff2"
+			rel="preload"
+			as="font"
+			crossorigin="anonymous"
+			/>
 		<link rel="preconnect" href="https://rsms.me/" />
 		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 		<link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
@@ -97,27 +104,21 @@ if (database.Icon && database.Icon.Type === 'file') {
 </style>
 
 <style is:global>
+	@import "@radix-ui/colors/gray.css";
+	@import "@radix-ui/colors/blue.css";
+	@import "@radix-ui/colors/ruby.css";
+	@font-face {
+		font-family: "Newsreader";
+		src: url("/fonts/newsreader-subset.woff2") format("woff2");
+		font-display: swap;
+		}
 	:root {
 		--gap-quarter: 0.25rem;
 		--gap-half: 0.5rem;
 		--gap: 1rem;
 		--gap-double: 2rem;
 
-		--bg: #fff;
-		--fg: color: rgb(82 82 91);
-		--accents-1: color: rgb(161 161 170);
-		--accents-2: color: rgb(161 161 170);
-		--accents-3: color: rgb(161 161 170);
-		--geist-foreground: #000;
-		--geist-success: #690;
-
 		--radius: 4px;
-
-		--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-			'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-			'Helvetica Neue', sans-serif;
-		--font-mono: SFMono-Regular, Menlo, Consolas, 'PT Mono', 'Liberation Mono',
-			Courier, monospace;
 	}
 
 	* {
@@ -140,21 +141,8 @@ if (database.Icon && database.Icon.Type === 'file') {
 
 	body {
 		min-height: 100vh;
-		background: var(--bg);
-		color: var(--fg);
-		font-family:
-			ui-sans-serif,
-			-apple-system,
-			BlinkMacSystemFont,
-			'Segoe UI',
-			Helvetica,
-			Meiryo,
-			'Apple Color Emoji',
-			Arial,
-			sans-serif,
-			'Segoe UI Emoji',
-			'Segoe UI Symbol';
-
+		background: var(--blue-1);
+		color: var(--blue-12);
 		/*background-image: radial-gradient(#ddd 1px, transparent 1px),
       radial-gradient(#ddd 1px, transparent 1px);*/
 		background-position:
@@ -192,11 +180,10 @@ if (database.Icon && database.Icon.Type === 'file') {
 	}
 
 	a {
-		color: var(--accents-1);
 		text-decoration: none;
 	}
 	a:hover {
-		color: var(--accents-1);
+		cursor: pointer;
 	}
 
 	mark {
@@ -207,7 +194,6 @@ if (database.Icon && database.Icon.Type === 'file') {
 
 	h1 {
 		margin: 0;
-		color: var(--fg);
 		font-size: 2rem;
 		font-weight: 700;
 	}
@@ -219,14 +205,12 @@ if (database.Icon && database.Icon.Type === 'file') {
 	}
 
 	ol {
-		color: #222;
 		font-weight: 400;
 		font-size: 0.9rem;
 		line-height: 1.8rem;
 	}
 	p,
 	ul {
-		color: #222;
 		font-weight: 400;
 		font-size: 1rem;
 		line-height: 1.8rem;

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import { fontFamily } from "tailwindcss/defaultTheme";
+
 import preline from 'preline/plugin.js';
 
 module.exports = {
@@ -8,8 +10,20 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			colors: {
+				gray: generateScale("gray"),
+				blue: generateScale("blue"),
+				ruby: generateScale("ruby"),
+
+			  },
 			fontFamily: {
-				body: ['Inter', 'sans-serif'],
+				body: ["Inter Var",
+				{
+				  fontFeatureSettings:
+					// eslint-disable-next-line max-len
+					'"calt","case","clig","cpsp" 1,"cv01" 1,"cv02","cv03" 1,"cv04" 1,"dlig" 1,"kern","liga"',
+				},],
+				serif: ["Newsreader", ...fontFamily.serif],
 				heading: ['SF Pro Display', 'sans-serif'],
 				sans: ['SF Pro Display', 'sans-serif'],
 
@@ -31,3 +45,16 @@ module.exports = {
 	},
 	plugins: [require('@tailwindcss/typography'), preline],
 };
+
+
+function generateScale(name) {
+	let scale = Array.from({ length: 12 }, (_, i) => {
+	  let id = i + 1;
+	  return [
+		[id, `var(--${name}-${id})`],
+		[`a${id}`, `var(--${name}A${id})`],
+	  ];
+	}).flat();
+  
+	return Object.fromEntries(scale);
+  }

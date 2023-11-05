@@ -100,7 +100,9 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
 			<div class="max-w-xl mt-8">
 				<PostTitle post={post} enableLink={false} />
 				<PostExcerpt post={post} />
-				<div class="mt-4 pointer-events-none"><PostTags post={post} /></div>
+				<div class="mt-4 pointer-events-none">
+					<PostTags post={post} />
+				</div>
 			</div>
 		</div>
 		<div class="w-full max-w-2xl mx-auto">

@@ -16,6 +16,8 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
     image = filePath(new URL(post.FeaturedImage.Url));
   }
 }
+
+let title = post.Title
 ---
 
 {
@@ -24,7 +26,7 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
       <img
         class="w-full object-cover md:rounded-xl"
         src={image}
-        alt="Gambar Feature aplikasi yang digunakan dalam diskusi perpajakan sharepoint teams telegram"
+        alt={title}
       />
     </div>
   )
