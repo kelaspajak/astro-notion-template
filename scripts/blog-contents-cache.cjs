@@ -1,4 +1,5 @@
 const { exec } = require('child_process');
+const path = require('path');
 const { Client } = require('@notionhq/client');
 const cliProgress = require('cli-progress');
 const { PromisePool } = require('@supercharge/promise-pool');
@@ -67,7 +68,8 @@ const getAllPages = async () => {
     .for(pages)
     .process(async (page) => {
       return new Promise((resolve) => {
-        const command = `NX_BRANCH=main npx nx run astro-notion-blog:_fetch-notion-blocks ${page.id} ${page.last_edited_time}`;
+        const scriptPath = path.resolve(__dirname, 'retrieve-block-children.cjs');
+        const command = `node "${scriptPath}" ${page.id}`;
         const options = { timeout: 60000 };
 
         exec(command, options, (err, stdout, stderr) => {
